@@ -1,18 +1,15 @@
 version: 2.1
 
 jobs:
-  say-hello:
+  olx-sre-nd-block1-lesson3-point09-job-test-env-vars:
     docker:
       - image: cimg/base:stable
-    environment:
-      MY_NAME: Diego
     steps:
-      - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello $MY_NAME"
+          name: "Test one env variable defined in our project settings"
+          command: echo $MY_ENV_VAR"
 
 workflows:
-  say-hello-workflow:
+  olx-sre-nd-block1-lesson3-point09-workflow-test-env-vars:
     jobs:
-      - say-hello
+      - olx-sre-nd-block1-lesson3-point09-job-test-env-vars
