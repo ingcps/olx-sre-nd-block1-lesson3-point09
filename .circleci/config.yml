@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: "Test one env variable defined in our project settings"
-          command: echo $MY_ENV_VAR"
+          command: echo $MY_ENV_VAR
 
 workflows:
   olx-sre-nd-block1-lesson3-point09-workflow-test-env-vars:
